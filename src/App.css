@@ -1,0 +1,35 @@
+html{
+  background-color: #1F2022;
+}
+.clickArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* or any height you want */
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.count {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  border: 1px solid black;
+
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.openText{
+  text-align: center;
+}
+
+.videoArea{
+  margin-top: 10px;
+}
