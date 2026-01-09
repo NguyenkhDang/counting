@@ -1,0 +1,10 @@
+.MathQuestion{
+  display: grid ;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding:5vh;
+  font-size: 5em;
+  text-align: center;
+}
+.row{
+  display: grid;
+}

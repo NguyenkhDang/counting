@@ -5,21 +5,21 @@ html{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300px; /* or any height you want */
+  height: 300px;
   padding: 1rem;
   border: 1px solid #ccc;
 }
+.CountAnimate{
 
-.count {
-  display: flex;
-  font-size: 2rem;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-  border: 1px solid black;
-
+  animation-name: Test;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
+.videoTimer{
+  display: grid;
+  grid-template-columns: 50% 50% ;
+}
 .buttons {
   display: flex;
   gap: 1rem;
@@ -32,4 +32,16 @@ html{
 
 .videoArea{
   margin-top: 10px;
+}
+
+@keyframes Test{
+  0% {
+    background-color: red;
+  }
+  50%{
+    background-color: green;
+  }
+  100%{
+    background-color: yellow;
+  }
 }
