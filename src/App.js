@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
-import VideoPlayer from './videoPlayer';
-import Timer from "./Timer"
-import MathQuestion from './MathQuestion';
-import Memory from './Memory';
-import './App.css';
+import VideoPlayer from './Component/videoPlayer';
+import Timer from "./Component/Timer"
+import MathQuestion from './Component/MathQuestion';
+import Memory from './Component/Memory';
+import LastStage from "./Component/LastStage"
+import Ending from './Component/Ending';
+import './CSS/App.css';
 
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(700);
 
   const [textVisible, setTextVisible] = useState(true)
   const [videoVisible, setVideoVisible] = useState(false)
@@ -18,14 +20,17 @@ function App() {
   const [questionVisible, setQuestionVisible] = useState(false)
   const [memoryVisible, setMemoryVisible] = useState(false);
 
+  const [begin, setBegin] = useState(true)
+  const [lastStage, setLastStage] = useState(false)
+  const [ending, setEnding] = useState(false);
 
   const [text, setText] = useState("")
-  const [isTrue, setIsTrue] = useState(true)
+  const [backgroundColorChange, setBackgroundColorChange] = useState(true)
   const [color, setColor] = useState("rgb(25, 223, 25)")
 
 
   const clickAreaStyle = {
-    backgroundColor: isTrue ? "white" : "gray"
+    backgroundColor: backgroundColorChange ? "white" : "gray"
   }
 
 
@@ -38,9 +43,13 @@ function App() {
 
 useEffect(() =>{
   switch(count){
-    case 1000: //End, victory fanfare audio, audio
+    case 1000: //Rick roll
+    setLastStage(false)
+    setEnding(true)
       break;
     case 900: //Change everything, zoom in, only button and counts
+    setLastStage(true);
+    setBegin(false);
       break;
     case 800: //Memory games with the button, replace timer
       setMemoryVisible(true);
@@ -51,7 +60,7 @@ useEffect(() =>{
       setVideoVisible(false)
       break;
     case 600://Add more button
-    setMoreButton(true);
+      setMoreButton(true);
       break;
     case 500://Animation on the counts
       setCountDefault(false);
@@ -67,7 +76,7 @@ useEffect(() =>{
       setColor("red")
       break;
     case 100: //Change background
-      setIsTrue(false);
+      setBackgroundColorChange(false);
       break;
     default:
       setText("Click the green button! Every 100 click count, something new will happen. Let's get to 1000!!!")
@@ -77,74 +86,51 @@ useEffect(() =>{
 
 
   return (
-    <div>
+    <>
+      {lastStage && <LastStage count = {count} setCount={setCount} lastStage={lastStage}/>}
+      {ending && <Ending />}
+      {begin && <div>
       <div className="clickArea" style={clickAreaStyle}>
-        <div className="counter" style={
-          {
-            backgroundColor: "white",
-            display:"flex",
-            fontSize:"2rem",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "10vh",
-            border: "1px solid black"
-          }
-        }>
-        {countDefault && <span>{count}</span>}
-        {counterAnimate && <span className='CountAnimate'>{count}</span>}
+        <div className="counter">
+          {countDefault && <span>{count}</span>}
+          {counterAnimate && <span className='CountAnimate'>{count}</span>}
         </div>
+
         {textVisible && <span className='openText'>{text}</span>}
 
 
 
-        <div className="buttons">
+        <div className="btn">
           <button
             onClick={onClick}
-            style={{
-              backgroundColor: color,
-              width: "15vw",
-              height: "15vh"
-            }}
+            style={{backgroundColor: color}}
             />
+
             {moreButton && <button
             onClick={onClick}
-            style={{
-              backgroundColor: color,
-              width: "15vw",
-              height: "15vh"
-            }}
+            style={{backgroundColor: color}}
             />}
             {moreButton && <button
             onClick={onClick}
-            style={{
-              backgroundColor: color,
-              width: "15vw",
-              height: "15vh"
-            }}
+            style={{backgroundColor: color}}
             />}
         </div>
       </div>
 
 
-      <div className="videoTimer">
+      <div className="funArea">
 
-        {videoVisible && count > 1 && <VideoPlayer />}
+        {videoVisible &&  <VideoPlayer />}
 
         {questionVisible && <MathQuestion setCount={setCount}/>}
 
-        {memoryVisible && count > 1 && <Memory setCount={setCount}/>}
-        {timervisible && count > 1 &&
-          <div
-            style={{
-            fontSize: "20rem",
-            textAlign:"center",
-            justifyContent: "center",
-            alignContent: "center"
-          }}>
-            <Timer/>
-          </div>}
+        {memoryVisible && <Memory setCount={setCount}/>}
+
+        {timervisible && <Timer />}
+
       </div>
-    </div>
+    </div>}
+    </>
   );
 
 }

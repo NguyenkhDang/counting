@@ -1,13 +1,19 @@
 .memory{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto ;
-  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
 }
 
 .memory.disable{
   pointer-events: none;
 
+}
+.buttonClass{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  height: 2vh;
 }
 
 .btn{

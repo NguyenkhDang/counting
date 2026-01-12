@@ -10,7 +10,13 @@ export default function Timer(){
 
 
   return (
-    <div>
+    <div
+      style={{
+      fontSize: "20rem",
+      textAlign:"center",
+      justifyContent: "center",
+      alignContent: "center"
+    }}>
         <span>{minutes}:{seconds}</span>
     </div>
   )

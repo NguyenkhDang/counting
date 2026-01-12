@@ -1,0 +1,11 @@
+.ending{
+  background-color: rgb(170, 145, 145);
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.congratText{
+  text-align: center;
+  margin: auto;
+}

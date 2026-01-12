@@ -1,0 +1,29 @@
+.MathQuestion{
+  display: grid ;
+  grid-template-rows:  1fr 1fr;
+  padding:5vh;
+  font-size: 5em;
+  text-align: center;
+}
+.row{
+  display: grid;
+}
+
+
+.numberPad{
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border: 2px solid black;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3fr 3fr 3fr;
+}
+.numberPad > button{
+    padding: 15px 0;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #6e6b6b;
+    border: 1px solid #837b7b;
+    border-radius: 5px;
+
+}

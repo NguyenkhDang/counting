@@ -5,9 +5,21 @@ html{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300px;
+  height: 28vh;
   padding: 1rem;
   border: 1px solid #ccc;
+}
+
+.counter{
+  display: flex;
+  background-color: "white";
+  text-align: center;
+  display: "flex";
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  border: 1px solid black
 }
 .CountAnimate{
 
@@ -16,16 +28,18 @@ html{
   animation-iteration-count: infinite;
 }
 
-.videoTimer{
+.funArea{
   display: grid;
   grid-template-columns: 50% 50% ;
 }
-.buttons {
+.btn {
   display: flex;
   gap: 1rem;
   justify-content: center;
+}.btn > button{
+  width: 15vw;
+  height: 15vh;
 }
-
 .openText{
   text-align: center;
 }
