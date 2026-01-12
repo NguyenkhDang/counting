@@ -9,7 +9,7 @@ import './CSS/App.css';
 
 
 function App() {
-  const [count, setCount] = useState(700);
+  const [count, setCount] = useState(0);
 
   const [textVisible, setTextVisible] = useState(true)
   const [videoVisible, setVideoVisible] = useState(false)
@@ -35,7 +35,7 @@ function App() {
 
 
   function onClick(){
-    setCount(count + 10);
+    setCount(count + 1);
     setTextVisible(false);
     setText("");
   }

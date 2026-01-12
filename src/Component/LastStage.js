@@ -48,7 +48,7 @@ const LastStage = ({ setCount, count, lastStage })=>{
   }
 
   function onClick(){
-    const newCount = count + 10;
+    const newCount = count + 1;
     setCount(newCount);
     if (newCount === 1000 && pianoSound.current){
       pianoSound.current.pause();
