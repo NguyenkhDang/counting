@@ -43,7 +43,7 @@ function App() {
 
 useEffect(() =>{
   switch(count){
-    case 1000: //Rick roll
+    case 1000: //Ending
     setLastStage(false)
     setEnding(true)
       break;
