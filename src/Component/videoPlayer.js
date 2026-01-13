@@ -1,15 +1,16 @@
 
-import ReactPlayer from "react-player"
+
 
 export default function VideoPlayer(){
   return (
     <div>
-      <ReactPlayer
-        src="https://www.youtube.com/watch?v=vTfD20dbxho"
-        autoPlay
-        muted
+      <iframe
         width="100%"
-        height="520px"
+        height="520"
+        src="https://www.youtube.com/embed/vTfD20dbxho?autoplay=1&mute=1"
+        title="YouTube video"
+        allow="autoplay; fullscreen"
+        allowFullScreen
       />
     </div>
   )

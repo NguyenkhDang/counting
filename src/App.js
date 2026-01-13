@@ -35,7 +35,7 @@ function App() {
 
 
   function onClick(){
-    setCount(count + 1);
+    setCount(count + 10);
     setTextVisible(false);
     setText("");
   }
