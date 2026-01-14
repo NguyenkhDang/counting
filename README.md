@@ -3,13 +3,21 @@ My First Independent React Project
 After completing the Meta React Front-End Developer Certification, this is the first project I built entirely on my own.
 
 What began as a simple click counter that counts to 1000 gradually evolved as new challenges appeared. Every 100 clicks unlocks a new feature on the webpage — from background and button color changes to interactive mini-games such as a Math Question Generator and a Simon Says–style memory game. Each feature introduced new problems and required creative problem-solving to implement.
-Live Demo: https://nguyenkhdang.github.io/counting/
 
-<h1>Installation</h1>
+Live Demo: https://nguyenkhdang.github.io/counting/
+<h1>Requirements</h1>
+<ul>
+  <li>Node.js</li>
+  <li>npm</li>
+</ul>
+<h1>Installation (Local)</h1>
 <ul>
   <li>npm install</li>
   <li>npm start</li>
 </ul>
+
+    Local Application
+    http://localhost:3000 
 
 <h1>Tech Stack</h1>
 <ul>
