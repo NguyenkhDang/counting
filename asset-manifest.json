@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/counting/static/css/main.71b817a3.css",
+    "main.js": "/counting/static/js/main.74a1d2c9.js",
+    "static/js/453.eeb2ec6c.chunk.js": "/counting/static/js/453.eeb2ec6c.chunk.js",
+    "static/media/pianoBackground.mp3": "/counting/static/media/pianoBackground.5bc087afef07941e5f35.mp3",
+    "static/media/VictoryFanfare.mp3": "/counting/static/media/VictoryFanfare.3fc24d98accf3fa502ec.mp3",
+    "index.html": "/counting/index.html",
+    "main.71b817a3.css.map": "/counting/static/css/main.71b817a3.css.map",
+    "main.74a1d2c9.js.map": "/counting/static/js/main.74a1d2c9.js.map",
+    "453.eeb2ec6c.chunk.js.map": "/counting/static/js/453.eeb2ec6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71b817a3.css",
+    "static/js/main.74a1d2c9.js"
+  ]
+}
