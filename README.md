@@ -375,10 +375,10 @@ Using the Random Sequence combining with forEach function, we get access to each
       if (userSequence.length === randomSequence.length) { console.log("You chooose the right sequences ") }
     }
     
-      const onClick = (value) => {
+      const onClick = (value) => {{
             userSequence.push(value);
             checkForMistake(userSequence);
-            
+            }
       }
       
     return (
