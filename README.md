@@ -48,7 +48,7 @@ Live Demo: https://nguyenkhdang.github.io/counting/
   <li>Games and other visibility features must be in a seperate component for resuablity and easier to make changes/fix bugs</li>
 </ul>
 
-<h1>Knowm Isssues</h1>
+<h1>Known Isssues</h1>
 <ul>
   <li>Mobile layout is not fully optimized</li>
   <li>Only way to reverse the negative number in math question is to backspace the whole thing</li>
