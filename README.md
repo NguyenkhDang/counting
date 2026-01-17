@@ -53,6 +53,7 @@ Live Demo: https://nguyenkhdang.github.io/counting/
   <li>Mobile layout is not fully optimized</li>
   <li>Only way to reverse the negative number in math question is to backspace the whole thing</li>
   <li>Division is not possible in the Math Question Generator due to decimals point</li>
+  <li>Music not looping</li>
 </ul>
 
 <h2>Below is what every 100 clicks do and what my solution to each problems as it appeared</h2>
