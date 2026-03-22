@@ -21,9 +21,10 @@ html{
   height: 10vh;
   border: 1px solid black
 }
+
 .CountAnimate{
 
-  animation-name: Test;
+  animation-name: Back-ground;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
@@ -32,11 +33,11 @@ html{
   display: grid;
   grid-template-columns: 50% 50% ;
 }
-.btn {
+.btn-container {
   display: flex;
   gap: 1rem;
   justify-content: center;
-}.btn > button{
+}.btn-main{
   width: 15vw;
   height: 15vh;
 }
@@ -48,7 +49,7 @@ html{
   margin-top: 10px;
 }
 
-@keyframes Test{
+@keyframes Back-ground{
   0% {
     background-color: red;
   }

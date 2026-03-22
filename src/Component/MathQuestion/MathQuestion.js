@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../CSS/MathQuestion.css"
+import "./MathQuestion.css"
 const MathQuestion = ({ setCount }) => {
 
   const [operators, setOperators] = useState("+")
@@ -9,30 +9,44 @@ const MathQuestion = ({ setCount }) => {
 
   const [text, setText] = useState(" ");
 
+const MakeQuestion = () => {
+  setText("");
 
-const MakeQuestion = () =>{
-  setText(" ")
-  setFirstNumber(Math.ceil(Math.random() * 10));
-  setSecondNumber(Math.ceil(Math.random() * 10));
-  const operatorSymbolArray = ["+", "-", "*"]
-  const randonOperator = operatorSymbolArray[Math.floor(Math.random() * operatorSymbolArray.length)];
-  setOperators(randonOperator)
-  setUserAnswer("")
-}
+  const operatorSymbolArray = ["+", "-", "*", "/"];
+  const randomOperator =
+    operatorSymbolArray[Math.floor(Math.random() * operatorSymbolArray.length)];
 
-const negative = () =>{
-  let neg = "-" + userAnswer
-  setUserAnswer(neg)
-}
+  setOperators(randomOperator);
+
+  if (randomOperator === "/") {
+    const divisor = Math.ceil(Math.random() * 10);
+    const result = Math.ceil(Math.random() * 10);
+
+    setSecondNumber(divisor);
+    setFirstNumber(divisor * result); 
+  } else {
+    setFirstNumber(Math.ceil(Math.random() * 10));
+    setSecondNumber(Math.ceil(Math.random() * 10));
+  }
+
+  setUserAnswer("");
+};
+
+const negativeAnswer = () => {
+  setUserAnswer(prev => prev.startsWith("-") ? prev.slice(1) : "-" + prev);
+};
+
 const handleClick = (value) =>{
   setUserAnswer(prev => prev + value)
 }
 
 const getAnswer = () =>{
-  
-  console.log(userAnswer)
+  if (userAnswer === "" || userAnswer === "-") return;
   let answer
   switch(operators) {
+    case "/":
+      answer = firstNumber / secondNumber;
+      break;
     case "+":
       answer = firstNumber + secondNumber;
       break;
@@ -63,21 +77,19 @@ const getAnswer = () =>{
         {operators}
         {secondNumber}
       </div>
-       <div className="row">
+      <div className="row">
         {text}
         {userAnswer} 
       </div>
        <div className="row">
         <div>
-          <button style={{
-                    backgroundColor: "#1b1b1b",
-                    border: "1px solid #837b7b",
-                    color: "white",
-                    width:"10vw",
-                    height: "5vh"}}
-
-                    onClick={negative}>(-)</button>
+          <button
+            className="btn-negative"
+            onClick={negativeAnswer}>
+              (-)
+          </button>
         </div>
+
         <div className="numberPad">
           <button onClick={() => handleClick(1)}>1</button>
           <button onClick={() => handleClick(2)}>2</button>
@@ -91,8 +103,6 @@ const getAnswer = () =>{
           <button onClick={() => handleClick(0)}>0</button>
           <button onClick={getAnswer} style={{backgroundColor: "green"}}>Check!</button>
           <button onClick={() => setUserAnswer(userAnswer.slice(0, -1))} style={{backgroundColor: "red"}}>Backspace</button>
-
-
         </div>
       </div>
     </div>

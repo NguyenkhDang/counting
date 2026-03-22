@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
-import pianoBackground from "../Sound/pianoBackground.mp3" // https://pixabay.com/music/modern-classical-piano-music-background-462847/
-import "../CSS/LastStage.css";
+import pianoBackground from "../../Sound/pianoBackground.mp3" // https://pixabay.com/music/modern-classical-piano-music-background-462847/
+import "./LastStage.css";
 
 const LastStage = ({ setCount, count, lastStage })=>{
 

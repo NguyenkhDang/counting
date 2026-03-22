@@ -9,6 +9,13 @@
   display: grid;
 }
 
+.btn-negative{
+  background-color: #1b1b1b;
+  border: 1px solid #837b7b;
+  color: white;
+  width: 10vw;
+  height: 5vh;
+}
 
 .numberPad{
   display: grid;

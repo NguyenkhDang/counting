@@ -5,10 +5,11 @@
   padding: 0;
 }
 
-.memory.disable{
-  pointer-events: none;
-
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
+
 .buttonClass{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -17,6 +18,9 @@
 }
 
 .btn{
+  width: 15vw;
+  height: 15vh;
+  margin: 0;
   opacity: 0.6;
   transform: opacity 0.2s, transform 0.2s;
 }

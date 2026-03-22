@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import VideoPlayer from './Component/videoPlayer';
-import Timer from "./Component/Timer"
-import MathQuestion from './Component/MathQuestion';
-import Memory from './Component/Memory';
-import LastStage from "./Component/LastStage"
-import Ending from './Component/Ending';
-import './CSS/App.css';
+import VideoPlayer from './Component/videoPlayer/videoPlayer';
+import Timer from "./Component/Timer/Timer"
+import MathQuestion from './Component/MathQuestion/MathQuestion';
+import Memory from './Component/Memory/Memory';
+import LastStage from "./Component/LastStage/LastStage"
+import Ending from './Component/Ending/Ending';
+import './App.css';
 
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
   const [counterAnimate, setCounterAnimate] = useState(false)
   const [countDefault, setCountDefault] = useState(true)
   const [moreButton, setMoreButton] = useState(false);
-  const [questionVisible, setQuestionVisible] = useState(false)
-  const [memoryVisible, setMemoryVisible] = useState(false);
+  const [questionVisible, setQuestionVisible] = useState(true)
+  const [memoryVisible, setMemoryVisible] = useState(true);
 
   const [begin, setBegin] = useState(true)
   const [lastStage, setLastStage] = useState(false)
@@ -100,8 +100,9 @@ useEffect(() =>{
 
 
 
-        <div className="btn">
+        <div className="btn-container">
           <button
+            className='btn-main'
             onClick={onClick}
             style={{backgroundColor: color}}
             />

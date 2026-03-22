@@ -28,7 +28,7 @@ export default function Timer(){
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [secondLastDigit]);
+  }, [minuteFirstDigit, minuteLastDigit, secondLastDigit, secondFirstDigit]);
 
 
   return (

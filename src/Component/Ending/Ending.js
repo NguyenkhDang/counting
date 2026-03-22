@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import "../CSS/Ending.css"
-import victoryFanfare from "../Sound/VictoryFanfare.mp3"
+import "./Ending.css"
+import victoryFanfare from "../../Sound/VictoryFanfare.mp3"
 import confetti from "canvas-confetti"; //https://github.com/catdad/canvas-confetti
 
 const Ending = () =>{
